@@ -1,0 +1,20 @@
+<div>
+    <% if (current_user) { %>
+        <p><strong>name:</strong> <%= current_user.firstname %> <%= current_user.lastname %></p>
+        <p><strong>email:</strong> <%= current_user.email %></p>
+        <p><strong>username:</strong> <%= current_user.username %></p>
+    <% } %>
+</div>
+
+<div class="buttons mt-3">
+    <% if (current_user) { %>
+        <a class="btn btn-link-2" href="/logout"> <i class="fa fa-sign-out msg-botton-icon" aria-hidden="true"></i> </a>
+    <% } else { %>
+        <div class="col-md-12"> <a class="btn btn-lg btn-google btn-block text-uppercase btn-outline" href="/auth/google"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Signup Using Google</a> </div>
+    <% } %>
+</div>
+
+<div class="buttons mt-3">
+    <div class="col-md-12"> <a class="fa fa-comments msg-botton-icon" aria-hidden="true" href="/msg"> Connect to chat</a> </div>
+   
+</div><br>
